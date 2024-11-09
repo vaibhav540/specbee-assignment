@@ -1,0 +1,338 @@
+/* Base Styling */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f0f4f8;
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background-color 0.4s ease;
+}
+
+h1,
+h2 {
+  font-weight: bold;
+}
+
+.speakers {
+  text-align: center;
+  padding: 2rem 0;
+  animation: fadeInUp 1s ease-in-out both;
+  /* border: 2px solid red; */
+}
+
+.speakers__heading {
+  margin-bottom: 1.5rem;
+}
+
+.speakers__title {
+  font-size: 2.5rem;
+  color: #1d3557;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.4s ease;
+}
+
+.speakers__description {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.speakers__slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  transition: transform 0.4s ease;
+}
+
+.speakers__arrow--left,
+.speakers__arrow--right {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.speakers__arrow--left:hover,
+.speakers__arrow--right:hover {
+  color: #457b9d;
+  transform: scale(1.2);
+}
+
+.speakers__list {
+  display: flex;
+  overflow: hidden;
+  gap: 1rem;
+}
+
+/* Speaker Card with Hover Animation */
+.speaker__card {
+  width: 200px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 1rem;
+  cursor: pointer;
+  transform: translateY(0);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.speaker__card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.speaker__card__photo {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.speaker__card:hover .speaker__card__photo {
+  transform: scale(1.05);
+}
+
+.speaker__card__name {
+  font-size: 1.3rem;
+  color: #1d3557;
+  transition: color 0.3s ease;
+}
+
+.speaker__card__position,
+.speaker__card__company {
+  font-size: 0.9rem;
+  color: #5a5a5a;
+}
+
+/* Program Button with Color Transition */
+.speakers__program-button {
+  margin-top: 2rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: rgb(0, 63, 180);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+.speakers__program-button:hover {
+  background-color: #1d3557;
+  transform: translateY(-5px);
+}
+
+/* Modal Styles with Fade-in Animation */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  z-index: 1000;
+  animation: fadeIn 0.5s ease both;
+}
+
+.modal__container {
+  background: #fff;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  padding: 1.5rem;
+  position: relative;
+  animation: slideIn 0.5s ease both;
+  box-shadow: 2px 2px 2px 2px;
+}
+
+.modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.modal__close:hover {
+  color: #e63946;
+}
+
+.modal__photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+.modal__name {
+  font-size: 1.4rem;
+  color: #222;
+  text-align: center;
+}
+
+.modal__position,
+.modal__company {
+  font-size: 1rem;
+  color: #777;
+  text-align: center;
+}
+
+.modal__line {
+  margin: 1rem 0;
+}
+
+.modal__description {
+  font-size: 0.95rem;
+  color: #555;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.modal__profile__socialicon {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.modal__profile__socialicon i {
+  font-size: 1.2rem;
+  color: #0073e6;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.modal__profile__socialicon i:hover {
+  color: #1d3557;
+  transform: scale(1.2);
+}
+
+.program-details {
+  display: flex;
+  justify-content: center;
+}
+
+.program-details__click {
+  margin-top: 2rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add responsiveness for small screens */
+@media (max-width: 768px) {
+  /* Adjust size for .program-details__navigation img */
+  .program-details__navigation img {
+    max-width: 100%; /* Ensure image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 1rem; /* Add margin for spacing */
+  }
+
+  /* Adjust .program-details__click button */
+  .program-details__click {
+    padding: 0.8rem 1.2rem; /* Adjust padding for smaller screen */
+    font-size: 1rem; /* Make text smaller */
+    width: 100%; /* Make button span the full width */
+    margin-top: 1rem; /* Add margin for spacing */
+  }
+
+  /* Adjust .speakers__program-button */
+  .speakers__program-button {
+    padding: 0.7rem 1.2rem; /* Reduce padding */
+    font-size: 1rem; /* Reduce font size */
+    width: 100%; /* Full-width button on small screens */
+    margin-top: 1rem; /* Margin for spacing */
+  }
+
+  /* Adjust layout of speakers__slider */
+  .speakers__slider {
+    flex-direction: row; /* Stack elements vertically */
+    gap: 1rem; /* Space out items */
+    justify-content: center;
+  }
+
+  .speakers__list {
+    flex-direction: column; /* Stack speaker cards vertically */
+    gap: 1rem; /* Space out cards */
+  }
+
+  /* Adjust speaker card size */
+  .speaker__card {
+    width: 100%; /* Full width card */
+    max-width: 320px; /* Limit width to avoid too large cards */
+    margin: 0 auto; /* Center the card */
+  }
+
+  /* Adjust font sizes in modal */
+  .modal__name {
+    font-size: 1.2rem; /* Smaller font size for modal name */
+  }
+
+  .modal__position,
+  .modal__company {
+    font-size: 0.9rem; /* Smaller font size for modal details */
+  }
+
+  /* Modify image size in modal */
+  .modal__photo {
+    width: 80px; /* Smaller image in modal */
+    height: 80px; /* Keep aspect ratio */
+  }
+
+  /* Adjust modal container for small screen */
+  .modal__container {
+    width: 90%; /* Use more screen width */
+    padding: 1rem; /* Reduce padding for smaller screens */
+  }
+}

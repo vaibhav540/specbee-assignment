@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>specbee</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section class="speakers">
+      <div class="speakers__heading">
+        <h1 class="speakers__title">
+          View our Featured Speakers for the Event
+        </h1>
+        <p class="speakers__description">
+          Speakers are core contributors and industry thought leaders working at
+          companies that push for innovation.
+        </p>
+      </div>
+
+      <div class="modal"></div>
+
+      <div class="speakers__slider">
+        <button class="speakers__arrow--left" aria-label="Previous slide">
+          <i class="ri-arrow-left-s-line"></i>
+        </button>
+
+        <div class="speakers__list"></div>
+
+        <button class="speakers__arrow--right" aria-label="Next slide">
+          <i class="ri-arrow-right-s-line"></i>
+        </button>
+      </div>
+    </section>
+    <section class="program-details">
+      <div class="program-details__click">
+        Click here to see the full program
+      </div>
+      <!-- <div class="program-details__navigation">
+        <img style="margin-top: 50px" src="./assets/Arrow 02.png" alt="" />
+      </div> -->
+      <button class="speakers__program-button">See the Program</button>
+    </section>
+    <div
+      class="program-details__navigation"
+      style="display: flex; justify-content: center; margin: 0px; padding: 0px"
+    >
+      <img src="./assets/Arrow 02.png" alt="" />
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
