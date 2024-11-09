@@ -16,6 +16,8 @@ Detailed speaker information displayed in a modal on click.
 Accessible and semantic HTML structure.
 BEM methodology for class naming.
 Responsive design for both mobile and desktop screens.
+
+
 Tech Stack:
 
 HTML, CSS (SASS/SCSS), Vanilla JavaScript (ES6)
