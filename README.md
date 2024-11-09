@@ -1,7 +1,7 @@
 # specbee-assignment
 
 
-Here’s a concise description for your GitHub repository:
+Here’s a concise description for my GitHub repository:
 
 deployment link:- https://authorvaibhavmorespecbee.netlify.app/
 
