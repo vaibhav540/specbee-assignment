@@ -3,7 +3,7 @@
 
 Here’s a concise description for my GitHub repository:
 
-deployment link:- [Application Deploymwnt Link](https://author-vaibhavmorefrom-specbee.netlify.app/)
+deployment link:- [Application Deployment Link](https://author-vaibhavmorefrom-specbee.netlify.app/)
 
 Speaker Slider with Modal Popover
 
