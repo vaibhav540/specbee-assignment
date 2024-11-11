@@ -33,16 +33,18 @@ h2 {
 }
 
 .speakers__title {
-  font-size: 2.5rem;
-  color: #1d3557;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: color 0.4s ease;
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
 }
 
 .speakers__description {
-  font-size: 1.1rem;
-  color: #666;
+  text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+}
+.speakers__companies {
+  color: rgb(0, 63, 180);
 }
 
 .speakers__slider {
@@ -133,98 +135,120 @@ h2 {
 }
 
 /* Modal Styles with Fade-in Animation */
+/* Modal Styles with Fade-in Animation */
 .modal {
   display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  z-index: 1000;
-  animation: fadeIn 0.5s ease both;
-}
-
-.modal__container {
-  background: #fff;
-  width: 80%;
-  max-width: 500px;
-  border-radius: 10px;
-  padding: 1.5rem;
   position: relative;
-  animation: slideIn 0.5s ease both;
-  box-shadow: 2px 2px 2px 2px;
-}
-
-.modal__close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: transparent;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.modal__close:hover {
-  color: #e63946;
-}
-
-.modal__photo {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin: 0 auto 1rem;
-  display: block;
-}
-
-.modal__name {
-  font-size: 1.4rem;
-  color: #222;
-  text-align: center;
-}
-
-.modal__position,
-.modal__company {
-  font-size: 1rem;
-  color: #777;
-  text-align: center;
-}
-
-.modal__line {
-  margin: 1rem 0;
-}
-
-.modal__description {
-  font-size: 0.95rem;
-  color: #555;
-  text-align: center;
-  margin-top: 1rem;
-}
-
-.modal__profile__socialicon {
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
+}
+.modal__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 4px 10px 24px 0px rgba(0, 0, 0, 0.1);
+  position: relative; /* Ensure close button is positioned within this container */
+  padding: 1rem; /* Adjust padding for some space */
 }
 
-.modal__profile__socialicon i {
-  font-size: 1.2rem;
-  color: #0073e6;
+@media (max-width: 1200px) {
+  .modal__container {
+    flex-direction: column;
+  }
+}
+
+.modal__profile {
+  display: flex;
+  padding: 36px 20px 47px 30px;
+}
+.modal__profile__photo {
+  height: 150px;
+  width: 150px;
+}
+.modal__profile__socialicon {
+  display: flex;
+  gap: 16px;
+  font-size: 24px;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+}
+.modal__details {
+  padding: 16px;
+}
+.modal__name {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.modal__position {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.modal__company {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  color: rgb(107, 107, 107);
+}
+.modal__line {
+  height: 161px;
+  border: 1px solid rgb(183, 183, 183);
+}
+@media (max-width: 1200px) {
+  .modal__line {
+    width: 400px;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .modal__line {
+    width: 300px;
+  }
+}
+.modal__content {
+  padding: 56px 30px 81px 20px;
+}
+.modal__description {
+  height: 96px;
+  width: 732px;
+  font-family: "Lora", serif;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+@media (max-width: 1200px) {
+  .modal__description {
+    width: 500px;
+  }
+}
+@media (max-width: 768px) {
+  .modal__description {
+    height: auto;
+    width: 300px;
+  }
+}
+
+/* Close Button Inside Modal */
+.modal__close {
+  position: absolute;
+  top: 0px;
+  right: 10px; /* Slight adjustment for better spacing inside modal */
+  width: 10px;
+  height: 10px;
+  font-size: 24px;
   cursor: pointer;
-  transition: color 0.3s ease, transform 0.3s ease;
+  background: none;
+  border: none;
+  color: rgb(50, 50, 50);
+}
+.modal__close:hover {
+  color: red;
 }
 
-.modal__profile__socialicon i:hover {
-  color: #1d3557;
-  transform: scale(1.2);
-}
-
+/* Program Details and Other Components */
 .program-details {
   display: flex;
   justify-content: center;
@@ -272,67 +296,59 @@ h2 {
 
 /* Add responsiveness for small screens */
 @media (max-width: 768px) {
-  /* Adjust size for .program-details__navigation img */
   .program-details__navigation img {
     max-width: 100%; /* Ensure image is responsive */
     height: auto; /* Maintain aspect ratio */
     margin-bottom: 1rem; /* Add margin for spacing */
   }
 
-  /* Adjust .program-details__click button */
   .program-details__click {
-    padding: 0.8rem 1.2rem; /* Adjust padding for smaller screen */
-    font-size: 1rem; /* Make text smaller */
-    width: 100%; /* Make button span the full width */
-    margin-top: 1rem; /* Add margin for spacing */
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    width: 100%;
+    margin-top: 1rem;
   }
 
-  /* Adjust .speakers__program-button */
   .speakers__program-button {
-    padding: 0.7rem 1.2rem; /* Reduce padding */
-    font-size: 1rem; /* Reduce font size */
-    width: 100%; /* Full-width button on small screens */
-    margin-top: 1rem; /* Margin for spacing */
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    width: 100%;
+    margin-top: 1rem;
   }
 
-  /* Adjust layout of speakers__slider */
   .speakers__slider {
-    flex-direction: row; /* Stack elements vertically */
-    gap: 1rem; /* Space out items */
+    flex-direction: row;
+    gap: 1rem;
     justify-content: center;
   }
 
   .speakers__list {
-    flex-direction: column; /* Stack speaker cards vertically */
-    gap: 1rem; /* Space out cards */
+    flex-direction: column;
+    gap: 1rem;
   }
 
-  /* Adjust speaker card size */
   .speaker__card {
-    width: 100%; /* Full width card */
-    max-width: 320px; /* Limit width to avoid too large cards */
-    margin: 0 auto; /* Center the card */
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
   }
 
-  /* Adjust font sizes in modal */
   .modal__name {
-    font-size: 1.2rem; /* Smaller font size for modal name */
+    font-size: 1.2rem;
   }
 
   .modal__position,
   .modal__company {
-    font-size: 0.9rem; /* Smaller font size for modal details */
+    font-size: 0.9rem;
   }
 
-  /* Modify image size in modal */
   .modal__photo {
-    width: 80px; /* Smaller image in modal */
-    height: 80px; /* Keep aspect ratio */
+    width: 80px;
+    height: 80px;
   }
 
-  /* Adjust modal container for small screen */
   .modal__container {
-    width: 90%; /* Use more screen width */
-    padding: 1rem; /* Reduce padding for smaller screens */
+    width: 90%;
+    padding: 1rem;
   }
 }

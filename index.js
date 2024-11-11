@@ -280,3 +280,26 @@ const renderPrev = () => {
 // Add click event listeners to navigation buttons
 prevBtn.addEventListener('click', renderPrev);
 nextBtn.addEventListener('click', renderNext);
+
+// Show the modal
+function showModal() {
+    const modal = document.querySelector('.modal');
+    modal.style.display = 'flex';
+    setTimeout(() => {
+      modal.classList.add('show');
+    }, 50); // Add a slight delay to ensure the animation starts after display change
+  }
+  
+  // Hide the modal
+  function hideModal() {
+    const modal = document.querySelector('.modal');
+    modal.classList.remove('show');
+    setTimeout(() => {
+      modal.style.display = 'none';
+    }, 300); // Delay the hiding of modal to allow the fade-out transition to complete
+  }
+  
+  // Example of triggering show/hide functions
+  document.querySelector('.open-modal-button').addEventListener('click', showModal);
+  document.querySelector('.modal__close').addEventListener('click', hideModal);
+  
